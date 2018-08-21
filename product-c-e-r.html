@@ -106,11 +106,13 @@
 						<thead>
 							<tr>
 								<th>ชื่อสินค้า</th>
-								<th>แบรนด์</th>							
-								<th>หมวดหมู่</th>
+								<th>โมเดล</th>
+								<th>รายละเอียด</th><!-- เอาออกได้ -->
+								<th>แบรนด์</th><!-- เอาออกได้ -->							
+								<th>หมวดหมู่</th><!-- เอาออกได้ -->
 								<th>ผู้จัดจำหน่าย</th>
 								<th>สถานะ</th>
-								<th style="width:15%;">คำสั่ง</th>
+								<th style="width:10%;">คำสั่ง</th>
 							</tr>
 						</thead>
 					</table>
@@ -121,10 +123,6 @@
 		</div> <!-- /col-md-12 -->
 	</div> <!-- /row -->
 
-	
-	
-	
-	
 	<!-- add product -->
 	<div class="modal fade" id="addProductModal" tabindex="-1" role="dialog">
 	  <div class="modal-dialog">
@@ -144,8 +142,24 @@
 						<div class="col-sm-8">
 						  <input type="text" class="form-control" id="productName" placeholder="ชื่อสินค้า" name="productName" autocomplete="off">
 						</div>
-				</div> <!-- /form-group-->	    
+				</div> <!-- /form-group-->
+				
+				<div class="form-group">
+					<label for="modelName" class="col-sm-3 control-label">โมเดล : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="modelName" placeholder="โมเดล" name="modelName" autocomplete="off">
+						</div>
+				</div> <!-- /form-group-->
 
+				<div class="form-group">
+					<label for="description" class="col-sm-3 control-label">รายละเอียด : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="descriptionName" placeholder="รายละเอียด" name="descriptionName" autocomplete="off">
+						</div>
+				</div> <!-- /form-group-->
+				
 				<div class="form-group">
 					<label for="brandName" class="col-sm-3 control-label">แบรนด์สินค้า : </label>
 					<label class="col-sm-1 control-label">: </label>
@@ -192,62 +206,117 @@
 		</div> <!-- /modal-content -->    
 	  </div> <!-- /modal-dailog -->
 	</div> 
-	<!-- /add categories -->
+	<!-- /add Products -->
 
 	
 	
+	<!-- edit product -->
+	<div class="modal fade" id="editProductModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+
+			<form class="form-horizontal" id="submitProductForm" action="######" method="POST" enctype="multipart/form-data">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title"><i class="glyphicon glyphicon-plus-sign"></i> แก้ไขรายการสินค้า</h4>
+			  </div>
+
+			  <div class="modal-body" style="max-height:450px; overflow:auto;">
+
+				<div class="form-group">
+					<label for="editProductName" class="col-sm-3 control-label">ชื่อสินค้า : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="editProductName" placeholder="ชื่อสินค้า" name="editProductName" autocomplete="off">
+						</div>
+				</div> <!-- /form-group-->
+				
+				<div class="form-group">
+					<label for="editModelName" class="col-sm-3 control-label">โมเดล : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="editModelName" placeholder="โมเดล" name="editModelName" autocomplete="off">
+						</div>
+				</div> <!-- /form-group-->
+
+				<div class="form-group">
+					<label for="editDescriptionName" class="col-sm-3 control-label">รายละเอียด : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="editDescriptionName" placeholder="รายละเอียด" name="editDescriptionName" autocomplete="off">
+						</div>
+				</div> <!-- /form-group-->
+				
+				<div class="form-group">
+					<label for="editBrandName" class="col-sm-3 control-label">แบรนด์สินค้า : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <select class="form-control" id="editBrandName" name="editBrandName">
+							<option value="">~~เลือกรายการ~~</option>
+							<option value="1">####</option>
+							<option value="2">####</option>
+						  </select>
+						</div>
+				</div> <!-- /form-group-->	
+
+				<div class="form-group">
+					<label for="editCategoryName" class="col-sm-3 control-label">หมวดหมู่สินค้า : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <select type="text" class="form-control" id="editCategoryName" placeholder="หมวดหมู่สินค้า" name="editCategoryName" >
+							<option value="">~~เลือกรายการ~~</option>
+							<option value="1">####</option>
+							<option value="2">####</option>
+						  </select>
+						</div>
+				</div> <!-- /form-group-->					        	         	       
+
+				<div class="form-group">
+					<label for="editProductStatus" class="col-sm-3 control-label">สถานะ : </label>
+					<label class="col-sm-1 control-label">: </label>
+						<div class="col-sm-8">
+						  <select class="form-control" id="editProductStatus" name="editProductStatus">
+							<option value="">~~เลือกรายการ~~</option>
+							<option value="1">####</option>
+							<option value="2">####</option>
+						  </select>
+						</div>
+				</div> <!-- /form-group-->	         	        
+			  </div> <!-- /modal-body -->
+			  
+			  <div class="modal-footer editProductFooter">
+				<button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ปิด</button>
+				
+				<button type="submit" class="btn btn-primary" id="editProductBtn" data-loading-text="Loading..." autocomplete="off"> <i class="glyphicon glyphicon-ok-sign"></i> บันทึก</button>
+			  </div> <!-- /modal-footer -->	      
+			</form> <!-- /.form -->	     
+		</div> <!-- /modal-content -->    
+	  </div> <!-- /modal-dailog -->
+	</div> 
+	<!-- /Edit Products -->
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<!-- remove products -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="removeProductModal">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<h4 class="modal-title"><i class="glyphicon glyphicon-trash"></i> ลบรายการสินค้า</h4>
+		  </div>
+		  <div class="modal-body">
+
+			<div class="removeProductMessages"></div>
+
+			<p>ยืนยันการลบ ?</p>
+		  </div>
+		  <div class="modal-footer removeProductFooter">
+			<button type="button" class="btn btn-default" data-dismiss="modal"> <i class="glyphicon glyphicon-remove-sign"></i> ปิด</button>
+			<button type="button" class="btn btn-primary" id="removeProductBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-ok-sign"></i> บันทึก</button>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<!-- /remove products -->	
 	
 		<script src="custom/js/product.js"></script>	
 	</div> <!-- container --><!-- CONTENT ทั้งหมด นอกนั้นเป็น Blade -->	
