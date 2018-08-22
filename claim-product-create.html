@@ -79,64 +79,89 @@
 		</div><!-- /.container-fluid -->
 		
 	</nav>
-
+	
 	<div class="container"><!-- CONTENT ทั้งหมด นอกนั้นเป็น Blade -->
 
-		<div class="row">
-			
-			<div class="col-md-3">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-									
-					<a href="###" style="text-decoration:none;color:black;">
-						--BLANK--
-						<span class="badge pull pull-right"></span>	
-					</a>
-									
-					</div> <!--/panel-hdeaing-->
-				</div> <!--/panel-->
-			</div> <!--/col-md-3-->
+	<div class="row">
+		<div class="col-md-12">
 
-			<div class="col-md-3">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<a href="###" style="text-decoration:none;color:black;">
-							--BLANK--
-							<span class="badge pull pull-right"></span>
-						</a>
-										
-					</div> <!--/panel-hdeaing-->
-				</div> <!--/panel-->
-			</div> <!--/col-md-3-->
+			<ol class="breadcrumb">
+			  <li><a href="#">หน้าหลัก</a></li>		  
+			  <li class="active">ผู้จัดจำหน่าย</li>
+			</ol>
 
-			<div class="col-md-3">
-				<div class="panel panel-warning">
+				<div class="panel panel-default">
 					<div class="panel-heading">
-						<a href="###" style="text-decoration:none;color:black;">
-							--BLANK--
-							<span class="badge pull pull-right"></span>	
-						</a>
-									
-					</div> <!--/panel-hdeaing-->
-				</div> <!--/panel-->
-			</div> <!--/col-md-3-->
-				
-			<div class="col-md-3">
-				<div class="panel panel-danger">
-					<div class="panel-heading">
-						<a href="###" style="text-decoration:none;color:black;">
-							--BLANK--
-							<span class="badge pull pull-right"></span>	
-						</a>
-									
-					</div> <!--/panel-hdeaing-->
-				</div> <!--/panel-->
-			</div> <!--/col-md-3-->
-			
-		</div> <!--/row-->		
+						<h4>
+							<i class='glyphicon glyphicon-edit'> สร้างรายการเคลมสินค้า   </i>
+						</h4>
+					</div> <!--/panel-->
 
-	
-	</div> <!-- container --><!-- CONTENT ทั้งหมด นอกนั้นเป็น Blade -->
-	
+					<div class="panel-body">
+						<form class="form-horizontal" method="POST" action="" id="createOrderForm">
+
+							<div class="form-group">
+								<label for="customerName" class="col-sm-2 control-label">ชื่อลูกค้า</label>
+								<div class="col-sm-10">
+								  <input type="text" class="form-control" id="customerName" name="customerName" autocomplete="off" />
+								</div>
+							</div> <!--/form-group-->
+							
+							<table class="table" id="productTable">
+								<thead>
+									<tr>			  			
+										<th style="width:25%;">ชื่อสินค้า/โมเดล</th>
+										<th style="width:20%;">อาการเสีย</th>
+										<th style="width:20%;">ซีเรียลนัมเบอร์</th>			  			
+										<th style="width:15%;">ลักษณะพิเศษ</th>			  			
+										<th style="width:15%;">สิ่งที่นำมาด้วย</th>
+										<th style="width:5%;" class="text-center" >ลบ</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr id="" class="">			  				
+											<td style="padding-left:1px;">
+												<input type="text" class="form-control" id="" name="" autocomplete="off">
+											</td>
+											<td style="padding-left:5px;">			  					
+												<input type="text" class="form-control" id="" name="" autocomplete="off">
+											</td>
+											<td style="padding-left:5px;">			  					
+												<input type="text" class="form-control" id="" name="" autocomplete="off">
+											</td>
+											<td style="padding-left:5px;">			  					
+												<input type="text" class="form-control" id="" name="" autocomplete="off">
+											</td>
+											<td style="padding-left:5px;">			  					
+												<input type="text" class="form-control" id="" name="" autocomplete="off">
+											</td>
+											<td style="padding-left:10px;">
+												<button class="btn btn-default removeProductRowBtn" type="button" id="removeProductRowBtn" onclick=""><i class="glyphicon glyphicon-trash"></i></button>
+											</td>
+										</tr>
+								</tbody>			  	
+							</table>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default" onclick="addRow()" id="addRowBtn" data-loading-text="Loading..."> <i class="glyphicon glyphicon-plus-sign"></i> เพิ่มสินค้าเคลม </button>
+								</div>
+							</div> <!--/form-group-->
+							
+							<div class="form-group submitButtonFooter">
+								<div class="col-sm-offset-9 col-sm-3">
+									
+									<button type="submit" id="createOrderBtn" data-loading-text="Loading..." class="btn btn-success"><i class="glyphicon glyphicon-ok-sign"></i> บันทึกรายการ</button>
+
+									<button type="reset" class="btn btn-default" onclick="resetOrderForm()"><i class="glyphicon glyphicon-erase"></i> ยกเลิก</button>
+								</div>
+							</div>
+						</form>
+					
+					</div><!-- /panel-body-->
+				</div>
+		</div> <!-- /col-md-12 -->
+	</div> <!-- /row -->
+
+	</div> <!-- container --><!-- CONTENT ทั้งหมด นอกนั้นเป็น Blade -->	
 	</body>
 </html>
