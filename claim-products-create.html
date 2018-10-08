@@ -130,7 +130,7 @@
 					<div class="form-group col-md-6"></div>
 					<div class="form-group col-md-6">
 						<label for="customer" class="text-info">ชื่อลูกค้า</label>
-						<input type="text" class="form-control" id="customerName" name="customerName" autocomplete="off" />
+						<input type="text" class="form-control" id="customerName" name="customerName" autocomplete="off" disabled="true"/>
 					</div>
 				</div>
 			</div>
@@ -147,13 +147,20 @@
 										<th class="text-info">ลักษณะพิเศษ</th>			  			
 										<th class="text-info">สิ่งที่นำมาด้วย</th>
 										<th class="text-info">หมายเหตุ</th>
-										<th class="text-info text-center" style="width:5%;">ลบ</th>
+										<th class="text-info text-center" style="width:6%;">ลบ</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
 										<td>
-											<input type="text" class="form-control" id="" name="ProductName" autocomplete="off">
+											<div class="input-group custom-search-form">
+												<input type="text" class="form-control" disabled="true">
+												<span class="input-group-btn">
+												<button class="btn btn-default" type="button">
+													<i class="fa fa-search"></i>
+												</button>
+											</span>
+											</div>
 										</td>
 										<td>
 											<input type="text" class="form-control" id="" name="Claim-reason" autocomplete="off">
@@ -172,11 +179,19 @@
 										</td>
 										<td>
 											<button class="btn btn-danger" type="button" id="removeProductClaimBtn"><i class="glyphicon glyphicon-trash"></i></button>
+											<button class="btn btn-warning" type="button" id="CopyProductClaimBtn"><i class="glyphicon glyphicon-copy"></i></button>
 										</td>
 									</tr>
 									<tr>
 										<td>
-											<input type="text" class="form-control" id="" name="ProductName" autocomplete="off">
+											<div class="input-group custom-search-form">
+												<input type="text" class="form-control" disabled="true">
+												<span class="input-group-btn">
+												<button class="btn btn-default" type="button">
+													<i class="fa fa-search"></i>
+												</button>
+											</span>
+											</div>
 										</td>
 										<td>
 											<input type="text" class="form-control" id="" name="Claim-reason" autocomplete="off">
@@ -195,8 +210,10 @@
 										</td>
 										<td>
 											<button class="btn btn-danger" type="button" id="removeProductClaimBtn"><i class="glyphicon glyphicon-trash"></i></button>
+											<button class="btn btn-warning" type="button" id="CopyProductClaimBtn"><i class="glyphicon glyphicon-copy"></i></button>
 										</td>
 									</tr>
+									
 								</tbody>
 							</table>
 						</div>
