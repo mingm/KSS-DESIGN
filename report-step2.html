@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">KSS SERVICE SYSTEM</a>
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="setting.htnl"><i class="fa fa-gear fa-fw"></i>การตั้งค่า</a></li>
+                        <li class="divider"></li>
+                        <li><a href="logout.html"><i class="fa fa-sign-out fa-fw"></i>ออกจากระบบ</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+			<!-- Menu Sidebar -->
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> แผงควบคุม</a>
+                        </li>
+                        <li>
+                            <a href="claim-product.html"><i class="fa fa-plus-circle"></i> เพิ่มรายการเคลมสินค้า</a>
+                        </li>
+                        <li>
+                            <a href="send-vendors.html"><i class="fa fa-plus-square"></i> เพิ่มรายการส่งเคลมสินค้า</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> ระบบข้อมูลลูกค้า<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="customers-list.html">เพิ่มข้อมูลลูกค้า</a>
+								</li>
+                            </ul>
+                        </li>
+						<li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> ระบบข้อมูลผู้นำเข้า<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="vendors-list.html">เพิ่มข้อมูลผู้นำเข้า</a>
+								</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> ระบบข้อมูลสินค้า<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="brands-list.html">เพิ่มแบรนด์สินค้า</a>
+                                </li>
+                                <li>
+                                    <a href="categories-list.html">เพิ่มหมวดหมู่สินค้า</a>
+                                </li>
+                                <li>
+                                    <a href="products-list.html">เพิ่มสินค้า</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> ระบบรายงาน<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="report-step1.html">รายงานสรุป</a>
+                                </li>
+                                <li>
+                                    <a href="report-years.html">รายงานเปรียบเทียบ/เดือน</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+		<!--Start Content-->
+		
+
+        <div id="page-wrapper">
+			<div class="row horizontal">
+				<div class="col-lg-12">
+					<h2 class="page-header">รายงานระบบ</h2>
+				</div>
+            </div>
+			
+			<div class="row horizontal">
+				<div class="col-lg-12">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h4>ยอดสินค้าส่งเคลมสูงสุด</h4>
+						</div>
+						<div class="panel-body">
+
+							<div class="table-responsive">
+								<table class="table table-condensed table-hover">
+									<thead>
+										<tr>
+											<th class="text-center" style="width: 50px;">ลำดับ</th>
+											<th>ชื่อสินค้า</th>
+											<th>รุ่นโมเดล</th>
+											<th>รายละเอียด</th>
+										</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td class="text-center">1</td>
+										<td>WIRELESS COMBO MK520R</td>
+										<td>MK520R</td>
+										<td>-</td>
+									</tr>
+										<tr>
+										<td class="text-center">2</td>
+										<td>AC3200 Wireless Tri-Band Gigabit Router</td>
+										<td>DIR-890L</td>
+										<td>-</td>
+									</tr>
+									<tr>
+										<td class="text-center">3</td>
+										<td>High Speed HDMI Cable with Ethernet 5002</td>
+										<td>5002-3DA-01 (1.8M)</td>
+										<td>-</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row horizontal">
+				<div class="col-lg-12">
+					<ul class="pagination pull-right">
+						<li class="paginate_button"><a href="#">ก่อนหน้า</a></li>
+						<li class="paginate_button active"><a href="#">1</a></li>
+						<li class="paginate_button"><a href="#">2</a></li>
+						<li class="paginate_button"><a href="#">3</a></li>
+						<li><a href="#">ถัดไป</a></li>
+					</ul>
+
+				</div>
+			</div>
+	
+	<!--End Content-->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+</body>
+
+</html>
